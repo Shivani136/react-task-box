@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import $ from 'jquery';
 import './box.css';
+import img from '../img/diagonal-line.png';
 
 function Box() {
 
@@ -49,7 +50,7 @@ function Box() {
             $('body').css('background-color', "#section-block5");
             $(document).ready(function () {
                 $('.parentss').click(function () {
-               $("#section-block5").css("background-color", bgColor);
+                    $("#section-block5").css("background-color", bgColor);
 
                 });
             });
@@ -59,15 +60,16 @@ function Box() {
     }
 
     const floodfill = () => {
-    $('.skin-colors li').on('click', function () {
+        $('.skin-colors li').on('click', function () {
             $('.skin-colors li').removeClass('active');
             $(this).addClass('active');
-            var bgColor = $(this).data('skin');
-            $(document).ready(function () {
-                $('.parents').click(function () {
-                    $(".parentss").css("background-color", bgColor);
 
-                    // $("#section-block5").css("background-color", bgColor);
+            var bgColor = $(this).data('skin');
+            $('body').css('background-color', "#section-block5");
+            $(document).ready(function () {
+                $('.parentss').click(function () {
+
+                    $("    #section-block5").css("background-color", bgColor);
 
                 });
             });
@@ -86,16 +88,32 @@ function Box() {
             var bgColor = $(this).data('skin');
             $('body').css('background-color', "#section-block5");
             $(document).ready(function () {
-                $('#section-block5').click(function () {
+                $('.parents').click(function () {
 
                     $("#section-block5").css("background-color", bgColor);
-
+                    // $("#ui-selected ").css("background-color", bgColor);
                 });
+                // $('.parents').click(function () {
+                //     $("#ui-selected").css({ " background-image": "url('../img/diagonal-line.png')" });
+                // });
             });
-            // $('body').css('background-color', bgColor);
-        });
 
+        });
+        //  $('body').css('background-color', bgColor);
+        selectImg()
         console.log("select button")
+    }
+
+    const selectImg = () => {
+
+        // $(function(){
+        //         $("input").click(function(){
+        //             $("body").css({'background-image':"url('diagonal-line.png')"}); 
+
+        //         });
+        //         });​
+
+        console.log("this is button")
     }
 
 
@@ -317,7 +335,7 @@ function Box() {
             $('.parents').click(function () {
                 //  $(".parentss").css("background-color",bgColor);
                 //  $(".rows").css("background-color", bgColor);   
-                $("#section-block5").css("background-color", bgColor);
+                // $("#section-block5").css("background-color", bgColor);
 
             });
         });
@@ -1195,8 +1213,13 @@ function Box() {
 
                         {temp && temp.map((item) => {
                             return (
-                                <div class="rows">
-                                    <section id='section-block5'></section>
+                                <div class="rows ">
+                                    {/* <div class="bloc"> */}
+                                    <section>
+                                        <div id='section-block5'></div>
+                                    </section>
+
+                                    {/* </div> */}
                                     {/* <div id='section-block5'>{item}</div> */}
                                 </div>
                             )

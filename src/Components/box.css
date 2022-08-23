@@ -207,7 +207,7 @@ h1 {
 
 .parents {
     margin-top: 20px;
-    margin-left: -89px;
+    margin-left: -105px;
     display: block;
     grid-gap: 5px;
     grid-template-columns: repeat(10, 18px);
@@ -291,6 +291,7 @@ h1 {
     border-top: 1px solid #555;
     float: right;
     background-color: rgb(25, 26, 25);
+    /* background-image:url(../img/diagonal-line.png); */
     margin-left: 62px;
     margin-top: -7px;
 
@@ -495,11 +496,23 @@ h1 {
 } */
 
 .rows {
-    margin: 0px -48px;
-    margin: 0px -32px;
-    gap: 0;
-    /* margin: 0px -15px; */
+  margin: 0px -32px;
+ display: inline-block;
+}
+.block{
+    background-color: #0074D9;
+}
+.block{
+    width: 300px;
     display: inline-block;
+    width: 300px;
+    height: 100px;
+    border-left: 1px solid #555;
+    border-top: 1px solid #555;
+    float: right;
+    background-color: rgb(14 146 153);
+    /* margin-left: 62px; */
+    margin-top: -7px;
 }
 
 :after,
@@ -611,8 +624,13 @@ div.contents {
     margin: 0 auto;
 }
 
-/* .ui-selected {
-    background-image:   url(../img/diagonal-line.png); 
+/* background-image: url("paper.gif");
+background-color: #cccccc; */
+#ui-selected {
+    /* width: 100px;
+    height: 100px;
+    float: right; */
+   /* background-color: rgb(86, 139, 0); */
+    background-image:url(../img/diagonal-line.png);  
   
-    
-} */
+}
