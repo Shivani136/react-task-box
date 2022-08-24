@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import $ from 'jquery';
 import './box.css';
-import img from '../img/diagonal-line.png';
+import line from '../img/line.png';
+import BackImg from './BackImg';
+import Edit from './Edit';
+import Select from './Select';
 
 function Box() {
-
+    const [isActive, setIsActive] = useState(false);
+    const [isEdit, setIsEdit] = useState(false);
     const [data, setData] = useState([]);
     const [list, setList] = useState([]);
     const [change, setChange] = useState('');
@@ -17,18 +21,21 @@ function Box() {
     const [color, setColor] = useState(false);
     const [bbb, setBbb] = useState(false);
 
-    const problem = document.querySelector("#myBtn");
-    const problem1 = document.querySelector("#myBtn");
 
-    if (problem) {
-        problem.addEventListener('keypress', (key) => {
-            if (key.key === 'click') {
-                let calculate = problem.value * problem1.value;
-                //  problem.value = eval(problem.value);
-            }
-            // console.log(calculate,">>>>>>>>>>>>>")
-        })
-    }
+    const handleClick = () => {
+        //  toggle
+        setIsActive(current => !current);
+
+        //  or set to true
+        // setIsActive(true);
+    };
+    const handleEditClick = () => {
+        //  toggle
+        setIsEdit(current => !current);
+
+        //  or set to true
+        //setIsEdit(true);
+    };
 
     const demo = () => {
         setAaa(true)
@@ -40,7 +47,7 @@ function Box() {
     }
 
     const editbtn = () => {
-        setColor(true)
+        // setColor(true)
 
         $('.skin-colors li').on('click', function () {
             $('.skin-colors li').removeClass('active');
@@ -51,8 +58,18 @@ function Box() {
             $(document).ready(function () {
                 $('.parentss').click(function () {
                     $("#section-block5").css("background-color", bgColor);
-
+                    // $("#section-block5" ,handleEditClick()).css({backgroundColor: isActive ? 'red' : '',
+                    // color: isActive ? 'white' : '',},"background-color", bgColor,
+                    // <h1>hello</h1>);
+                    //     <div 
+                    //     style={{
+                    //       backgroundColor: isActive ? 'red' : '',
+                    //       color: isActive ? 'white' : '',
+                    //     }} onClick={handleEditClick} >
+                    //     this is edit
+                    //   </div>
                 });
+             
             });
             // $('body').css('background-color', bgColor);
         });
@@ -73,50 +90,74 @@ function Box() {
 
                 });
             });
-            // $('body').css('background-color', bgColor);
+
         });
         console.log("flood fill functionality is working ")
     }
-
 
     const selectbtn = () => {
 
         $('.skin-colors li').on('click', function () {
             $('.skin-colors li').removeClass('active');
             $(this).addClass('active');
-
+            // handleClick()
             var bgColor = $(this).data('skin');
             $('body').css('background-color', "#section-block5");
             $(document).ready(function () {
                 $('.parents').click(function () {
+                    // $("#section-block5", handleClick()).css("background-color", bgColor);
+                    // $(".parents").click(function () {
+                    $("#section-block5", handleClick()).css({
+                        backgroundImage: isActive ? `url(${line})` : '',
+                        color: isActive ? 'pink' : ''
+                    }, "background-color", bgColor);
 
-                    $("#section-block5").css("background-color", bgColor);
-                    // $("#ui-selected ").css("background-color", bgColor);
+
+                    // });
+                    // <div id='section-block5'
+                    //     style={{
+                    //         backgroundImage: isActive ? `url(${line})` : '',
+                    //         color: isActive ? '#11ffee00' : '',
+
+
+                    //     }}
+                    // // onClick={handleClick}
+                    // >
+                    //     1
+                    // </div>
                 });
-                // $('.parents').click(function () {
-                //     $("#ui-selected").css({ " background-image": "url('../img/diagonal-line.png')" });
-                // });
+
             });
 
         });
-        //  $('body').css('background-color', bgColor);
+
         selectImg()
+        //  $('body').css('background-color', bgColor);
+
         console.log("select button")
     }
 
     const selectImg = () => {
+        // <div 
+        //     style={{
+        //         backgroundImage: isActive ? `url(${line})` : '',
+        //         color: isActive ? '#11ffee00' : '',
 
-        // $(function(){
-        //         $("input").click(function(){
-        //             $("body").css({'background-image':"url('diagonal-line.png')"}); 
+        //     }} >hello
+        // </div>
+        $(function () {
+            $(".parents").click(function () {
+                $("#section-block5").css({
+                    backgroundImage: isActive ? `url(${line})` : '',
+                    color: isActive ? '#11ffee00' : ''
+                });
 
-        //         });
-        //         });​
 
-        console.log("this is button")
+            });
+        })
+
+        console.log("this is background image")
     }
-
-
 
     const resize = (e) => {
         e.preventDefault()
@@ -132,7 +173,6 @@ function Box() {
         // console.log("$$$$$$$$$", i)
         temp.push(i)
     }
-
 
     function copyFromInput1() {
         return (<div>
@@ -296,55 +336,7 @@ function Box() {
 
     }
 
-    // background color change functionality
-
-    // $(document).ready(function () {
-    //     $("p").on("click", "#section-block5", function (event) {
-    //         $(event.delegateTarget).css("background-color", "pink");
-    //         console.log("this is clicked")
-    //     });
-    // });
-    //
-    // $(document).ready(function () {
-    //     $('#section-block5').click(function () {
-    //         // $(".parentss").css("background-color"," red");
-    //      $("#section-block5").css("background-color", "blue");
-    //     });
-    // });
-
-    // $(document).ready(function () {  
-    //     $("#section-block5").click(function () {
-    //         $(".rows").css("background-color", "red");
-    //     });
-    // });
-
-    // $(document).ready(function () {
-    //     $("#section-block5").click(function () {
-    //         $(".parentss").css("background-color", "green","red ");
-    //     });
-    // });
-
-
-    $('.skin-colors li').on('click', function () {
-        $('.skin-colors li').removeClass('active');
-        $(this).addClass('active');
-
-        var bgColor = $(this).data('skin');
-        $('body').css('background-color', "#section-block5");
-        $(document).ready(function () {
-            $('.parents').click(function () {
-                //  $(".parentss").css("background-color",bgColor);
-                //  $(".rows").css("background-color", bgColor);   
-                // $("#section-block5").css("background-color", bgColor);
-
-            });
-        });
-        // $('body').css('background-color', bgColor);
-    });
-
-
     //hide button functionality..
-
     $(document).ready(function () {
         $(".copy-btn").click(function () {
             $(".parentss").hide();
@@ -359,7 +351,10 @@ function Box() {
 
     return (
         <>
+            <BackImg />
+            <Edit />
 
+            <Select />
             <div class="header">
                 <p>Task demonstration</p>
                 <button class="task-btn" type="button">Next test input</button>
@@ -1207,25 +1202,31 @@ function Box() {
                 <div class="column" style={{ backgroundColor: '#ffff', }}>
                     <p> Output </p>
 
-                    {/* {console.log("$$$$$$$@@@$", temp)} */}
+                    {console.log("$$$$$$$@@@$", temp)}
                     {/* {temp.length && temp.map((item) => { */}
                     <div class="parentss ">
-
+                        {console.log("@@@@@@@@@@")}
                         {temp && temp.map((item) => {
+                            console.log("$$$$$$$", item)
                             return (
-                                <div class="rows ">
-                                    {/* <div class="bloc"> */}
-                                    <section>
-                                        <div id='section-block5'></div>
-                                    </section>
 
-                                    {/* </div> */}
-                                    {/* <div id='section-block5'>{item}</div> */}
+                                <div class="rows ">
+                                
+                                        <div id='section-block5'></div>
+                                 
+
+                                    {/* <div id='section-block5'
+                                        style={{
+                                            backgroundImage: isActive ? `url(${line})` : '',
+                                            color: isActive ? '#11ffee00' : '',
+                                            // width:'100px',
+
+                                        }} >
+                                    </div> */}
+
                                 </div>
                             )
-
                         })}
-
                     </div>
 
 
@@ -1263,20 +1264,21 @@ function Box() {
                         <div class="colum" onClick={selectbtn}>
                             <input type="radio" name="edit" id="select" />
                             <label for="html">Select</label>
+
                         </div>
                         <div class="colum" onClick={floodfill}>
                             <input type="radio" name="edit" value="floodFill" id="mode2" />
                             <label for="mode2">Flood fill</label>
-                            {/* <input type="radio" name="edit" id="floodfill" />
-                            <label for="html">FloodFill</label> */}
+
                         </div>
                     </div>
+
                     {/* color layout  */}
-
-
                     <div class="parents" >
-
-
+                        {/* <div id='section-block5' style={{
+                                backgroundImage: isActive ? `url(${line})` : '',
+                                color: isActive ? 'white' : '',
+                            }}> </div> */}
                         <ul class="skin-colors">
                             <li data-skin="#1A1413" style={{ backgroundColor: '#1A1413' }} class="active"></li>
                             <li data-skin="#0672F3 " style={{ backgroundColor: '#0672F3' }} ></li>
@@ -1291,9 +1293,7 @@ function Box() {
                         </ul>
                     </div>
 
-                    {/* <div class="contents">
-                        <span class="change"> </span>
-                    </div>  */}
+
                 </div>
 
 
@@ -1344,3 +1344,15 @@ function Box() {
 }
 export default Box;
 
+  // const problem = document.querySelector("#myBtn");
+    // const problem1 = document.querySelector("#myBtn");
+
+    // if (problem) {
+    //     problem.addEventListener('keypress', (key) => {
+    //         if (key.key === 'click') {
+    //             let calculate = problem.value * problem1.value;
+    //             //  problem.value = eval(problem.value);
+    //         }
+    //         // console.log(calculate,">>>>>>>>>>>>>")
+    //     })
+    // }
