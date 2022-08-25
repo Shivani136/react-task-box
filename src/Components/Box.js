@@ -20,6 +20,7 @@ function Box() {
     const [aaa, setAaa] = useState(false);
     const [color, setColor] = useState(false);
     const [bbb, setBbb] = useState(false);
+    const [subbtn, setSubBtn] = useState(false);
 
 
     const handleClick = () => {
@@ -41,6 +42,13 @@ function Box() {
         setAaa(true)
         // console.log("first")
     }
+
+    const demos = () => {
+        setSubBtn(true)
+
+        // console.log("first")
+    }
+
     const resetgrid = () => {
         setBbb(true)
         // console.log("firstss")
@@ -60,7 +68,7 @@ function Box() {
                     $("#section-block5").css("background-color", bgColor);
                     // $("#section-block5" ,handleEditClick()).css({backgroundColor: isActive ? 'red' : '',
                     // color: isActive ? 'white' : '',},"background-color", bgColor,
-                    // <h1>hello</h1>);
+
                     //     <div 
                     //     style={{
                     //       backgroundColor: isActive ? 'red' : '',
@@ -69,11 +77,11 @@ function Box() {
                     //     this is edit
                     //   </div>
                 });
-             
+
             });
             // $('body').css('background-color', bgColor);
         });
-        console.log("edit button is click ")
+        //  console.log("edit button is click ")
     }
 
     const floodfill = () => {
@@ -92,7 +100,7 @@ function Box() {
             });
 
         });
-        console.log("flood fill functionality is working ")
+        //console.log("flood fill functionality is working ")
     }
 
     const selectbtn = () => {
@@ -100,31 +108,20 @@ function Box() {
         $('.skin-colors li').on('click', function () {
             $('.skin-colors li').removeClass('active');
             $(this).addClass('active');
-            // handleClick()
+
             var bgColor = $(this).data('skin');
             $('body').css('background-color', "#section-block5");
             $(document).ready(function () {
                 $('.parents').click(function () {
                     // $("#section-block5", handleClick()).css("background-color", bgColor);
-                    // $(".parents").click(function () {
+
                     $("#section-block5", handleClick()).css({
                         backgroundImage: isActive ? `url(${line})` : '',
                         color: isActive ? 'pink' : ''
                     }, "background-color", bgColor);
 
 
-                    // });
-                    // <div id='section-block5'
-                    //     style={{
-                    //         backgroundImage: isActive ? `url(${line})` : '',
-                    //         color: isActive ? '#11ffee00' : '',
 
-
-                    //     }}
-                    // // onClick={handleClick}
-                    // >
-                    //     1
-                    // </div>
                 });
 
             });
@@ -134,7 +131,7 @@ function Box() {
         selectImg()
         //  $('body').css('background-color', bgColor);
 
-        console.log("select button")
+        //console.log("select button")
     }
 
     const selectImg = () => {
@@ -156,7 +153,7 @@ function Box() {
             });
         })
 
-        console.log("this is background image")
+        // console.log("this is background image")
     }
 
     const resize = (e) => {
@@ -176,6 +173,148 @@ function Box() {
 
     function copyFromInput1() {
         return (<div>
+            <div class="parent11 ">
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+
+                <div className='section-5'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-5'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+
+                <div className='section-1'></div>
+                <div className='section-5'></div>
+                <div className='section-5'></div>
+                <div className='section-1'></div>
+                <div className='section-8'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+
+                <div className='section-1'></div>
+                <div className='section-5'></div>
+                <div className='section-5'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-8'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-8'></div>
+                <div className='section-8'></div>
+
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-8'></div>
+                <div className='section-8'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-8'></div>
+                <div className='section-8'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+
+
+                <div className='section-1'></div>
+                <div className='section-4'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-4'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-4'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-4'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-4'></div>
+                <div className='section-4'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-4'></div>
+                <div className='section-4'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+                <div className='section-1'></div>
+            </div>
+        </div>
+        )
+    }
+
+    function resetGrid() {
+        return (<div>
+            <div class="parent12 " >
+                <div class="">
+                    <div id='section-block5'></div>
+                    <div id='section-block5'></div>
+                    <div id='section-block5'></div>
+
+                    <div id='section-block2' style={{ height: '96px' }}></div>
+                    <div id='section-block2' style={{ marginTop: '-195px', height: '94px' }}></div>
+                    <div id='section-block2' style={{ marginTop: '-101px', }}></div>
+
+                    <div id='section-block3'></div>
+                    <div id='section-block3' style={{ marginTop: '-195px', }}></div>
+                    <div id='section-block3' style={{ marginTop: '-101px', height: '100px' }}></div>
+                </div>
+
+
+            </div>
+        </div>
+        )
+    }
+
+    function submit() {
+        return (<div>
+
             <div class="parent11 " >
                 <div className='section-1'></div>
                 <div className='section-1'></div>
@@ -288,29 +427,7 @@ function Box() {
                 <div className='section-1'></div>
                 <div className='section-1'></div>
             </div>
-
-        </div>
-        )
-    }
-    function resetGrid() {
-        return (<div>
-            <div class="parent12 " >
-                <div class="">
-                    <div id='section-block5'></div>
-                    <div id='section-block5'></div>
-                    <div id='section-block5'></div>
-
-                    <div id='section-block2' style={{ height: '96px' }}></div>
-                    <div id='section-block2' style={{ marginTop: '-195px', height: '94px' }}></div>
-                    <div id='section-block2' style={{ marginTop: '-101px', }}></div>
-
-                    <div id='section-block3'></div>
-                    <div id='section-block3' style={{ marginTop: '-195px', }}></div>
-                    <div id='section-block3' style={{ marginTop: '-101px', height: '100px' }}></div>
-                </div>
-
-
-            </div>
+            <div id="correct">Correct Solution</div>
         </div>
         )
     }
@@ -1073,7 +1190,7 @@ function Box() {
             <div class="header">
                 <p>Test </p>
                 <div class="btn-text">1/1
-                    <button class="button" type="button">Next test input</button>
+                    <button class="tasks-btn" type="button">Next test input</button>
                     <i class="fa fa-question-circle icon"></i>
                 </div>
             </div>
@@ -1202,27 +1319,20 @@ function Box() {
                 <div class="column" style={{ backgroundColor: '#ffff', }}>
                     <p> Output </p>
 
-                    {console.log("$$$$$$$@@@$", temp)}
-                    {/* {temp.length && temp.map((item) => { */}
+                    {/* {console.log("$$$$$$$@@@$", temp)} */}
+
                     <div class="parentss ">
-                        {console.log("@@@@@@@@@@")}
+                        {/* {console.log("@@@@@@@@@@")} */}
                         {temp && temp.map((item) => {
                             console.log("$$$$$$$", item)
                             return (
 
                                 <div class="rows ">
-                                
-                                        <div id='section-block5'></div>
-                                 
 
-                                    {/* <div id='section-block5'
-                                        style={{
-                                            backgroundImage: isActive ? `url(${line})` : '',
-                                            color: isActive ? '#11ffee00' : '',
-                                            // width:'100px',
+                                    <div id='section-block5'></div>
 
-                                        }} >
-                                    </div> */}
+
+
 
                                 </div>
                             )
@@ -1242,7 +1352,7 @@ function Box() {
                             {/* <input type="text" name="input" size="16" id="answer" onkeyup=" this.value = eval(this.value)"/>*/}
                             {/* <input type="text" class="textbox" size="30" id='myBtn' value={calculate}
                                 onChange={(e) => setCalculate(e.target.value)} placeholder="Type a math problem and press enter" /> */}
-
+                            {/* Change grid size : */}
                             <input type="text" class="textbox" value={change} onChange={(e) => setChange(e.target.value)} />
                             <input type="text" class="textbox" value={againChange} onChange={(e) => setAgainChange(e.target.value)} />
 
@@ -1251,15 +1361,13 @@ function Box() {
                         </form>
                     </div>
 
-                    {/* edit , select, floodfill */}
+
                     <div class="row">
                         <div class="colum" onClick={editbtn}>
 
                             <input type="radio" name="edit" id="edit" />
                             <label for="html">Edit</label>
-                            {/* {color === false ? console.log("first") :
-                                editbtn()
-                            } */}
+
                         </div>
                         <div class="colum" onClick={selectbtn}>
                             <input type="radio" name="edit" id="select" />
@@ -1273,12 +1381,8 @@ function Box() {
                         </div>
                     </div>
 
-                    {/* color layout  */}
                     <div class="parents" >
-                        {/* <div id='section-block5' style={{
-                                backgroundImage: isActive ? `url(${line})` : '',
-                                color: isActive ? 'white' : '',
-                            }}> </div> */}
+
                         <ul class="skin-colors">
                             <li data-skin="#1A1413" style={{ backgroundColor: '#1A1413' }} class="active"></li>
                             <li data-skin="#0672F3 " style={{ backgroundColor: '#0672F3' }} ></li>
@@ -1296,10 +1400,6 @@ function Box() {
 
                 </div>
 
-
-
-
-
                 <div class="columns" style={{ backgroundColor: '#ffffff' }}>
                     <button class="copy-btn" onClick={demo}>copy from input </button>
                     {aaa === false ? console.log("first") :
@@ -1313,11 +1413,16 @@ function Box() {
                     {bbb === false ? console.log("second") :
                         resetGrid()
                     }
-                    <button class="submit-btn" type="button">Submit</button>
-
+                    <button class="submit-btn" type="button" onClick={demos}>Submit</button>
+                    {subbtn === false ? console.log("first") :
+                        submit()
+                    }
                 </div>
-            </div>
 
+
+            </div>
+            {/* <div id="wrong">Wrong Solution</div> */}
+            {/* <div id="correct">Correct Solution</div> */}
 
             {
                 data.slice(0, 3).map(item => {
@@ -1344,15 +1449,3 @@ function Box() {
 }
 export default Box;
 
-  // const problem = document.querySelector("#myBtn");
-    // const problem1 = document.querySelector("#myBtn");
-
-    // if (problem) {
-    //     problem.addEventListener('keypress', (key) => {
-    //         if (key.key === 'click') {
-    //             let calculate = problem.value * problem1.value;
-    //             //  problem.value = eval(problem.value);
-    //         }
-    //         // console.log(calculate,">>>>>>>>>>>>>")
-    //     })
-    // }

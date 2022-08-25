@@ -29,3 +29,16 @@ function Select() {
 }
 
 export default Select;
+
+// const problem = document.querySelector("#myBtn");
+    // const problem1 = document.querySelector("#myBtn");
+
+    // if (problem) {
+    //     problem.addEventListener('keypress', (key) => {
+    //         if (key.key === 'click') {
+    //             let calculate = problem.value * problem1.value;
+    //             //  problem.value = eval(problem.value);
+    //         }
+    //         // console.log(calculate,">>>>>>>>>>>>>")
+    //     })
+    // }
